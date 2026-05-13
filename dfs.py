@@ -3,7 +3,7 @@ from graph import Graph
 class DFS:
     def __init__(self, g, s):
         self.s = s
-        self.marked = {}
+        self.marked = set()
         self.edgeTo = {}
         self.__dfs(g, s)
 
@@ -19,7 +19,7 @@ class DFS:
         return path
 
     def __dfs(self, g, s):
-        self.marked[s] = True
+        self.marked.add(s)
         for w in g.getAdj(s):
             if w not in self.marked:
                 self.edgeTo[w] = s
