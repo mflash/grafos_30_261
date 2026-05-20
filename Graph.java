@@ -30,6 +30,14 @@ public class Graph {
     in.close();
   }
 
+  public void addVertex(String v) {
+    if (vertices.contains(v))
+      return;
+    List<String> res = new LinkedList<>();
+    graph.put(v, res);
+    vertices.add(v);
+  }
+
   public void addEdge(String v, String w) {
     addToList(v, w);
     addToList(w, v);
