@@ -1,9 +1,9 @@
 public class AppComparaCaminhosMinimos {
    
     public static void main(String[] args) {
-        EdgeWeightedDigraph g = new EdgeWeightedDigraph("exemplos/mediumEWG.txt");
-        Digraph g2 = DigraphGenerator.complete(40);
-        System.out.println(g2.toDot());
+        // EdgeWeightedDigraph g = new EdgeWeightedDigraph("exemplos/mediumEWG.txt");
+        EdgeWeightedDigraph g = WeightedDigraphGenerator.complete(40);
+        System.out.println(g.toDot());
 
         long start = System.nanoTime();
         for(String v: g.getVerts()) {
